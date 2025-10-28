@@ -15,11 +15,11 @@ to send structured profiler events and display them in Tracy Viewer in real time
 
 ## 📦 How it work ?
 
-1. An external program (for example, Java) generates a binary package:
-    [byte PacketType] // 1 = zoneStart, 0 = zoneEnd, 3 = markFrame
-    [int NameLength] // string length (UTF-16, as in Java)
-    [char NameCharacter] // UTF-16 characters
-    [int ThreadId] // Thread Id
+1. An external program (for example, Java) generates a binary package: <br>
+    [byte PacketType] // 1 = zoneStart, 0 = zoneEnd, 3 = markFrame <br>
+    [int NameLength] // string length (UTF-16, as in Java) <br>
+    [char NameCharacter] // UTF-16 characters <br>
+    [int ThreadId] // Thread Id <br>
 2. **Tracy Socket Server** accepts the packet, decrypts it, creates or terminates a zone in Tracy.
 3. **Tracy Viewer** displays the result on a timeline with the names of the streams.
 
