@@ -42,10 +42,16 @@ int main() {
 
         profiler.handlePacket(data);
     }
+    std::cout << "[C++] Client disconnected\n";
 
     profiler.shutdown();
 
     closesocket(clientSocket);
     closesocket(serverSocket);
     WSACleanup();
+
+    std::cout << "[C++] Server shutting down\n";
+
+    std::cout << "\nPress any key to exit...";
+    std::cin.get();
 }

@@ -16,3 +16,5 @@ add_subdirectory(extern/tracy)
 
 # Связываем с Tracy клиентом
 target_link_libraries(cpp_programm PRIVATE Tracy::TracyClient)
+
+set(CMAKE_EXE_LINKER_FLAGS "-static -static-libgcc -static-libstdc++")
